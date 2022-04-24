@@ -1,7 +1,10 @@
 // No banner da home, está faltando centralizar os elementos filhos da section que tem o id#introducao.
 const introducaoSection = document.getElementById('introducao')
-introducaoSection.style.display = 'flex'
-introducaoSection.style.justifyContent = 'center'
+introducaoSection.style =
+`display:flex;
+ justify-content:center;
+ align-itens:center;
+`
 
 // Na etapa de depoimentos, o título deveria ser "O que falam sobre nós".
 const tituloDepoimento = document.querySelector('.depoimento h3')
@@ -11,11 +14,10 @@ tituloDepoimento.innerText = 'O que falam sobre nós'
 const blogTitle = document.querySelectorAll('.titulo h3')
 blogTitle[1].innerText = 'Mais conteúdo para você'
 
-// Todos os textos que estiverem com a classe.titulodevem apresentar todas as letras maiúsculas.
-const titulos = document.getElementsByClassName('titulo')
-for(titulo of titulos){
-    titulo.style.textTransform = 'uppercase'
-}
+// Todos os textos que estiverem com a classe.titulo devem apresentar todas as letras maiúsculas.
+document.querySelectorAll('.titulo').forEach((titulo) => {
+    titulo.style ='text-transform: uppercase;'
+})
 
 // o botão "ver todos os posts" deve ter um link que direciona para o arquivo blog.html
 const butaoAllPosts = document.getElementById('todos_posts')
