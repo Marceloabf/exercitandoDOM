@@ -8,7 +8,7 @@ textArea.style.boxSizing = 'border-box'
 
 //Após o campo de email, precisamos de um novo campo para que o usuário adicione também um número de telefone
 const cellNumberImput = document.createElement('input')
-cellNumberImput.setAttribute('type', 'phone')
+cellNumberImput.setAttribute('type', 'tel')
 cellNumberImput.setAttribute('required', true)
 cellNumberImput.setAttribute('placeholder','número de telefone')
 formulario.insertBefore(cellNumberImput,textArea)
